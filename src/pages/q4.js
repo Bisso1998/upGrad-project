@@ -33,19 +33,28 @@ class Student extends Component {
         // always executed
       })
   }
+  clearAll = () => {
+    this.setState({
+      value: "",
+    })
+  }
 
   componentDidMount() {}
 
   render() {
     return (
       <div>
-        <h1>HI</h1>
-        <input onChange={e => this.updateValue(e)} value={this.state.value} />
+        <h1>Hi</h1>
+        <input
+          onChange={e => this.updateValue(e)}
+          value={this.state.value}
+          placeholder="Enter name..."
+        />
         <br />
         {this.state.result}
         <br />
         <button onClick={this.guessGender}>Whats the Gender?</button>
-        <button onClick={this.makeNormalCase}>Clear All</button>
+        <button onClick={this.clearAll}>Clear All</button>
       </div>
     )
   }

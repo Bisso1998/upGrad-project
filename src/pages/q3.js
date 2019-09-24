@@ -52,14 +52,12 @@ class Student extends Component {
   render() {
     return (
       <div>
-        <h1>HI</h1>
         <input onChange={e => this.filterMovies(e)} value={this.state.value} />
         {this.state.changedValue} <br />
+        <b> Movie list:</b>
         {this.state.listOfMovies.map(eachMovie => (
           <div>{eachMovie.title}</div>
         ))}
-        <button onClick={this.makeCrazyCase}>crazyCase</button>
-        <button onClick={this.makeNormalCase}>Normal Case</button>
       </div>
     )
   }

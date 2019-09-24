@@ -38,12 +38,13 @@ class Student extends Component {
   render() {
     return (
       <div>
-        <h1>HI</h1>
+        <h1>Crazy Case</h1>
         <input
           onChange={e => this.updateInputBoxValue(e)}
           value={this.state.value}
         />
-        {this.state.changedValue} <br />
+        <br />
+        <h3>{this.state.changedValue}</h3> <br />
         <button onClick={this.makeCrazyCase}>crazyCase</button>
         <button onClick={this.makeNormalCase}>Normal Case</button>
       </div>
